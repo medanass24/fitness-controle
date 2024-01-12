@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFlex Fitness</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #8a0606;
+            background-image: url(gym1.jpg);
+            background-position-x: center;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            text-align: left;
+        }
+        footer {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #3dbc2f;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0d21b9;
+        }
+        .class-schedule {
+            margin-top: 20px;
+        }
+        .class-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PowerFlex Fitness</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadPage('home')">Home</a></li>
+            <li><a href="#" onclick="loadPage('classes')">Classes</a></li>
+            <li><a href="#" onclick="loadPage('schedule')">Schedule</a></li>
+            <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        <!-- Content will be dynamically loaded here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PowerFlex Fitness. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function loadPage(page) {
+            document.getElementById('content').innerHTML = '';
+            if (page === 'home') {
+                document.getElementById('content').innerHTML = `
+                    <h2>Welcome to PowerFlex Fitness!</h2>
+                    <h3>Facility Highlights:<h3>
+                    <p>Welcome to PowerFlex Fitness, where excellence meets fitness innovation! Our gym is thoughtfully designed to elevate your workout experience, providing a range of top-notch features to cater to your every fitness need. Step into our spacious workout areas, meticulously crafted to offer a dynamic and motivating environment for your training sessions.
+
+Our gym boasts a cutting-edge selection of state-of-the-art equipment, carefully curated to cater to all fitness levels and training preferences. From the latest cardio machines to an extensive array of strength training equipment, we ensure that every visit to PowerFlex is an opportunity to challenge yourself and achieve your fitness goals.
+
+For those seeking relaxation after an intense workout, our wellness amenities include rejuvenating saunas, allowing you to unwind and soothe your muscles in a tranquil environment. Dive into our group fitness studios, where expert instructors lead dynamic and engaging classes, fostering a sense of camaraderie among our fitness community.
+
+And because we believe in nourishing your body from the inside out, our gym features a premium smoothie bar. Recharge with a refreshing and nutritious blend of post-workout goodness, carefully crafted to complement your fitness journey.
+
+At PowerFlex Fitness, we've created a fitness haven where dedication meets luxury, ensuring that every aspect of your gym experience is designed to inspire and elevate. Join us on this transformative journey, where your fitness aspirations become a reality in a facility that truly stands out. Your path to peak performance begins here at PowerFlex Fitness!.</p>
+                `;
+            } else if (page === 'classes') {
+                document.getElementById('content').innerHTML = `
+                    <h2>Classes</h2>
+                    <div class="class-card">
+                        <h3>Cardio Kickboxing</h3>
+                        <p>Monday & Wednesday at 6:00 PM</p>
+                        <p>Join our high-energy kickboxing class to boost your cardio and tone muscles.</p>
+                    </div>
+                    <div class="class-card">
+                        <h3>Strength Training</h3>
+                        <p>Tuesday & Thursday at 7:30 AM</p>
+                        <p>Build strength and endurance with our specialized strength training sessions.</p>
+                    </div>
+                `;
+            } else if (page === 'schedule') {
+                document.getElementById('content').innerHTML = `
+                    <h2>Class Schedule</h2>
+                    <div class="class-schedule">
+                        <h3>Monday</h3>
+                        <p>Cardio Kickboxing - 6:00 PM</p>
+                    </div>
+                    <div class="class-schedule">
+                        <h3>Tuesday</h3>
+                        <p>Strength Training - 7:30 AM</p>
+                    </div>
+                    <!-- Add more days and classes as needed -->
+                `;
+            } else if (page === 'contact') {
+                document.getElementById('content').innerHTML = `
+                    <h2>Contact Us</h2>
+                    <p>Feel free to reach out to us for any inquiries or feedback.</p>
+                    <button onclick="loadPage('home')">Go back to Home</button>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>

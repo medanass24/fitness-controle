@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page Web Évoluée</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            text-align: left;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, select {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ma Page Web Évoluée</h1>
+    </header>
+
+    <section>
+        <h2>Bienvenue sur ma page web!</h2>
+        <p>C'est une page web évoluée avec HTML, CSS et JavaScript.</p>
+
+        <button onclick="changerCouleur()">Changer la couleur</button>
+
+        <h3>Liste Dynamique</h3>
+        <ul id="maListe">
+            <li>Élément 1</li>
+            <li>Élément 2</li>
+            <li>Élément 3</li>
+        </ul>
+
+        <h3>Formulaire</h3>
+        <form>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom">
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email">
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ma Page Web Évoluée. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function changerCouleur() {
+            var body = document.body;
+            body.style.backgroundColor = getRandomColor();
+        }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+</html>

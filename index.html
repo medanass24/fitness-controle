@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Frontend Web</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #000000;
+        }
+
+        header {
+            background-color: #000000;
+            color: rgb(227, 148, 0);
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #600404;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            text-align: center;
+            
+        }
+        a{ 
+            color: #b99c0a;
+        }
+        
+
+        section.hero {
+            height: 500px;
+            display: flex;
+            
+            justify-content: center;
+            background-image: url(gym1.jpg);
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        section.hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: rgb(227, 148, 0);
+        }
+
+        section.hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        section.dd {
+            background-color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-position: center;
+            background-size: auto;
+        }
+        section.hero button {
+            background-color: #0a61b9;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        section.hero button:hover {
+            background-color: #ccc;
+        }
+
+        section.features {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .feature {
+            margin-bottom: 40px;
+        }
+
+        .feature img {
+            width: 400px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .feature h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #e19600;
+        }
+
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeInUp 1s ease-in-out;
+        
+
+
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>POWERFLEX FITNESS</h1>
+        <h3>PFF</h3>
+    </header>
+
+    <nav>
+        <ul class="aa">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+<section class="dd">
+    <section class="hero">
+        <div class="animated">
+            <h1>Welcome to PowerFlex Fitness</h1>
+            <p>Welcome to PowerFlex Fitness, where fitness meets transformation! At PowerFlex, we believe in harnessing the extraordinary potential within each individual to achieve optimal health and well-being. Our state-of-the-art gym facilities provide the perfect environment for your fitness journey, offering a diverse range of classes and personalized training programs. Whether you're a seasoned athlete or just starting your fitness adventure, our expert trainers and cutting-edge equipment are here to guide and empower you. Join our vibrant fitness community and experience the PowerFlex difference – where strength, endurance, and a positive mindset converge to sculpt the best version of yourself. Unleash your power, embrace the challenge, and redefine your limits at PowerFlex Fitness. Your transformation starts here!</p>
+            <button>Get Started</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature animated">
+            <img src="g1.jpg" alt="Feature 1">
+            <h2>"Unleash Your Inner Warrior:</h2>
+            <p>Embark on a journey where sweat transforms into strength, and dedication molds into triumph. Every drop of effort is a step towards a stronger, healthier you. Remember, the only limit is the one you set for yourself. Push beyond, conquer the challenges, and emerge a warrior of your own destiny at PowerFlex Fitness. Your transformation starts now."</p>
+        </div>
+
+        <div class="feature animated">
+            <img src="g2.webp" alt="Feature 2">
+            <h2>"Rise and Grind:</h2>
+            <p>In the arena of self-improvement, every rep, every set, and every drop of sweat counts. Your goals don't wait for you; they challenge you to rise and grind. Embrace the discomfort, celebrate the progress, and revel in the journey. At PowerFlex Fitness, we believe in the power within you. Unleash it, and let your journey to greatness begin."</p>
+        </div>
+
+        <div class="feature animated">
+            <img src="g3.jpeg" alt="Feature 3">
+            <h2>"Fuel Your Ambition:</h2>
+            <p>At PowerFlex Fitness, we don't just lift weights; we lift ambitions. Your fitness journey is a testament to your commitment and perseverance. Embrace the grind, cherish the struggle, and let your determination be the driving force behind your success. You are not just working out; you are working towards a better version of yourself. Fuel your ambition, and let your strength speak for itself."</p>
+        </div>
+    </section>
+</section>
+
+    <footer>
+        <p>&copy; 2024 Advanced Frontend Web. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
